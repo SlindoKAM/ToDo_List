@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+    margin-top: 80px;
+    color: #F00;
+}
+
+section.first-cta{
+    text-align: center;
+
+    .container{
+        background: #909090;
+    }
+}
