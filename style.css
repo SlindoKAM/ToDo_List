@@ -1,13 +1,27 @@
+body{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    background-color: #514343;
+}
+
 h1{
     text-align: center;
     margin-top: 80px;
     color: #F00;
+
+    img{
+        width: 56px;
+        margin-left: 16px;
+        margin-bottom: -16px;
+    }
 }
 
 section.first-cta{
     text-align: center;
+    background: #909090;
 
     .container{
-        background: #909090;
+
     }
 }

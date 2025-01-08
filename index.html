@@ -15,13 +15,28 @@
     <header>
         <h1>
             Task List
+            <img src="images/task-list-icon.png" alt="Icon for the tasks list.">
         </h1>
     </header>
 
     <section class="first-cta">
         <div class="container">
-            <input type="text" id="task-to-do" placeholder="Enter a New Task">
+            <!-- search input and it btn next to it -->
+            <input type="text" id="taskToDo" placeholder="Search Task or Add New Task">
+            <button id="searchBtn">🔍</button>
         </div>
+
+            <!-- the add btn -->
+            <button id="addBtn"> Add Task</button>
+
+            <!-- the edit btn -->
+            <button id="editBtn"> Edit Task</button>
+
+            <!-- the delete btn -->
+            <button id="delBtn"> Delete Task</button>
+
+            <!-- the list of task TO-DO(appends) -->
+            <ul id="listToDos"></ul>
     </section>
 
     <script src="main.js"></script> 
