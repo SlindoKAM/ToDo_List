@@ -9,12 +9,12 @@ h1{
     text-align: center;
     margin-top: 32px;
     color: #F00;
+}
 
-    img{
-        width: 56px;
-        margin-left: 16px;
-        margin-bottom: -16px;
-    }
+h1 img{
+    width: 56px;
+    margin-left: 16px;
+    margin-bottom: -16px;
 }
 
 section.first-cta{
@@ -32,7 +32,7 @@ section.first-cta{
     } 
 
     input{
-        width: 100%;
+        width: 80%;
         padding: 10px;
         font-size: 16px;
         border-radius: 16px;
@@ -64,6 +64,14 @@ section.first-cta{
         margin-bottom: 5px;
         background-color: #f9f9f9;
     }
+
+    li:hover{
+        background: #DDD;
+    }
+}
+
+.task{
+    flex: 1;
 }
 
 /* input, button {
