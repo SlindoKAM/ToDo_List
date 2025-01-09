@@ -8,7 +8,7 @@ body{
 h1{
     text-align: center;
     margin-top: 32px;
-    color: #F00;
+    color: rgba(255, 0, 0, 0.5);
 }
 
 h1 img{
@@ -72,6 +72,12 @@ section.first-cta{
 
 .task{
     flex: 1;
+}
+
+.error-msg{
+    color: red;
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* input, button {
