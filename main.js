@@ -133,6 +133,20 @@ editBtn.addEventListener('click', () =>
     }
 });
 
+//Delete the selected task.
+delBtn.addEventListener('click', () =>
+{
+    if(selectedTaskIndex >=0)
+    {
+        //splice() is a JavaScript Array method that is used to remove, replace or insert items starting at a chosen index, here from the task array.
+        tasks.splice(selectedTaskIndex, 1);
+
+        taskToDo.value = '';
+        saveTasks();
+        renderTask();
+    }
+});
+
 //Initial render of tasks
 renderTask();
 // function renderTask (filter = "")
