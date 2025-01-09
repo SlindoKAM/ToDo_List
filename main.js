@@ -82,31 +82,56 @@ function saveTasks()
 
 //Add a new task using the add button.
 addBtn.addEventListener('click', () =>
+{
+    const task = taskToDo.value.trim();
+
+    //Checking if the input by the user is empty.
+    if(!task)
     {
-        const task = taskToDo.value.trim();
+        showError('Task you are adding can not be empty!!');
+        return;
+    }
 
-        //Checking if the input by the user is empty.
-        if(!task)
+    //Checking if the task already exists in the list.
+    if(tasks.includes(task))
+    {
+        showError('Task is already on the list enter new task!!');
+        return;
+    }
+
+    //adding task to the list of tasks in localStorage using push.
+    tasks.push(task);
+
+    //Clearing the input field
+    taskToDo.value = '';
+    saveTasks();
+    renderTask();
+});
+
+//search functionality will come back!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+//Edit the task being selected through the edit button after it is enabling it.
+editBtn.addEventListener('click', () =>
+{
+    //Check if a task is selected.
+    if(selectedTaskIndex >= 0)
+    {
+        const updatedTask = taskToDo.value.trim();
+
+        if(!updatedTask)
         {
-            showError('Task you are adding can not be empty!!');
+            showError('You made your task empty, that is not allowed!!');
             return;
         }
 
-        //Checking if the task already exists in the list.
-        if(tasks.includes(task))
-        {
-            showError('Task is already on the list enter new task!!');
-            return;
-        }
+        //Updating the task itself, overwriting it, in that index.
+        tasks[selectedTaskIndex] = updatedTask;
 
-        //adding task to the list of tasks in localStorage using push.
-        tasks.push(task);
-
-        //Clearing the input field
         taskToDo.value = '';
         saveTasks();
         renderTask();
-    });
+    }
+});
 
 //Initial render of tasks
 renderTask();
