@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Slindo Ngcobo">
+    <meta name="description" content="This is my first app to create(To-Do-List app)">
+    <link rel="icon" href="images/to-do-icon.png" type="image/x-icon">
+    <title>
+        To-Do List App
+    </title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>
+            Task List
+            <img src="images/task-list-icon.png" alt="Icon for the tasks list.">
+        </h1>
+    </header>
+
+    <section class="first-cta">
+        <div class="container">
+            <!-- search input and it btn next to it -->
+            <input type="text" id="taskToDo" placeholder="Search Task or Add New Task">
+            <button id="searchBtn">🔍</button>
+        </div>
+
+            <!-- the add btn -->
+            <button id="addBtn"> Add Task</button>
+
+            <!-- the edit btn -->
+            <button id="editBtn"> Edit Task</button>
+
+            <!-- the delete btn -->
+            <button id="delBtn"> Delete Task</button>
+
+            <!-- the list of task TO-DO(appends) -->
+            <ul id="listToDos"></ul>
+
+            <div class="error-msg" id="errorMsg"></div>
+    </section>
+
+    <script src="main.js"></script> 
+</body>
+</html>
