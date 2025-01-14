@@ -108,7 +108,13 @@ addBtn.addEventListener('click', () =>
     renderTask();
 });
 
-//search functionality will come back!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//search functionality (doing a live search)
+taskToDo.addEventListener('keyup', () =>
+{
+    const searchTerm = taskToDo.value.trim().toLowerCase();
+    const filteredTasks = tasks.filter(task => task.toLowerCase().includes(searchTerm));
+    renderTask(filteredTasks);
+});
 
 //Edit the task being selected through the edit button after it is enabling it.
 editBtn.addEventListener('click', () =>
