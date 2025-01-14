@@ -5,7 +5,7 @@
 
 //Constant variables of buttons (DOM ELEMENTS)
 const addBtn = document.getElementById('addBtn');
-const searchBtn = document.getElementById('searchBtn');
+// const searchBtn = document.getElementById('searchBtn');
 const editBtn = document.getElementById('editBtn');
 const delBtn = document.getElementById('delBtn');
 
