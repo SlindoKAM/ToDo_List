@@ -63,7 +63,7 @@ section.first-cta{
         align-items: center;
         padding: 10px;
         margin-bottom: 5px;
-        background-color: #f9f9f9;
+        background: #f9f9f9;
     }
 
     li:hover{
