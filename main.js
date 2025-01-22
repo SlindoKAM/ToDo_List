@@ -114,6 +114,10 @@ taskToDo.addEventListener('keyup', () =>
     const searchTerm = taskToDo.value.trim().toLowerCase();
     const filteredTasks = tasks.filter(task => task.toLowerCase().includes(searchTerm));
     renderTask(filteredTasks);
+    
+    //Enable even when the search is happening(underway).
+    editBtn.disabled = false;
+    delBtn.disabled = false;
 });
 
 //Edit the task being selected through the edit button after it is enabling it.
