@@ -27,14 +27,17 @@ function renderTask(filteredTasks = tasks)
     //Clearing the list
     listToDos.innerHTML = '';
     
-    filteredTasks.forEach((task, index) => 
+    filteredTasks.forEach((task) => 
     {
+        //Mapping to the original index
+        const originalIndex = tasks.indexOf(task);
+
         //Creates HTML list element in DOM to represent a task item(task to be added)
         const li = document.createElement('li');
         li.innerHTML = `<span class='task'>${task}</span>`;
 
         //Select the task by clicking it
-        li.addEventListener('click', () => selectedTask(index));
+        li.addEventListener('click', () => selectedTask(originalIndex));
         listToDos.appendChild(li);
     });
 
